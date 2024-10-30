@@ -1,29 +1,28 @@
+<h1>Saadi_code<h2>
 # Projet Enigma
 
 ## Description
-Ce projet est une émulation de la machine Enigma en Python. Il inclut des fonctionnalités de chiffrement et de déchiffrement avec une configuration de rotors et un réflecteur personnalisables. L’interface est disponible en ligne de commande et avec une interface graphique.
+This project is an emulation of the Enigma machine in Python. It includes encryption and decryption features with customizable rotor configuration and reflector. The interface is available as a command line and with a graphical interface.
 
 
 ## Fonctionnalités
-- Chiffrement et déchiffrement de messages.
-- Interface en ligne de commande et interface graphique.
-- Configuration des rotors et du réflecteur via un fichier JSON.
-- Possibilité de sauvegarder et de charger des configurations personnalisées.
-- Mode verbose pour afficher les étapes de chiffrement/déchiffrement.
-- Tests unitaires pour vérifier la validité du chiffrement et déchiffrement.
+- Encryption and decryption of messages.
+- Command line interface and GUI.
+- Configuration of rotors and reflector via a JSON file.
+- Ability to save and load custom configurations.
+- Verbose mode to display encryption/decryption steps.
+- Unit tests to verify the validity of encryption and decryption.
 
 
 ## Prérequis
 - Python 3.x
-- Tkinter (installé par défaut avec Python)
 
 
 ## Installation
-1. Clonez le dépôt :
+1. Clone the repo :
    ```bash
    git clone https://github.com/votre-depot/Projet_Enigma.git
-2. Assurez-vous que toutes les dépendances sont installées si nécessaire.
-
+2. Make sure all dependencies are installed if necessary.
 
 ## Utilisation
 ### Interface en ligne de commande
@@ -31,64 +30,54 @@ Ce projet est une émulation de la machine Enigma en Python. Il inclut des fonct
    ```bash
    python cli_interface.py
    ```
-2. Choisissez si vous souhaitez charger la configuration par défaut ou une configuration personnalisée.
-3. Entrez la clé initiale (ex: "ABC") pour définir la position de départ des rotors.
-4. Sélectionnez le mode Chiffrer ou Déchiffrer.
-5. Traitement d’un message : Entrez un message à chiffrer ou déchiffrer.
-6. Traitement d’un fichier : Choisissez l’option F pour sélectionner un fichier texte à chiffrer ou déchiffrer. Le fichier sera traité et sauvegardé avec un suffixe _encrypted.txt ou _decrypted.txt.
-7. Sauvegarde de configuration : Choisissez l'option S pour sauvegarder la configuration actuelle dans config/custom_config.json.
-
+2. Choose whether you want to load the default configuration or a custom configuration.
+3. Enter the initial key (ex: "ABC") to set the starting position of the rotors.
+4. Select Encrypt or Decrypt mode.
+5. Processing a message: Enter a message to encrypt or decrypt.
+6. Processing a file: Choose option F to select a text file to encrypt or decrypt. The file will be processed and saved with an _encrypted.txt or _decrypted.txt suffix.
+7. Configuration Backup: Choose option S to save the current configuration to config/custom_config.json.
 
 ### Interface graphique
-1. Exécutez le fichier gui_interface.py :
+1. Excute this commadn gui_interface.py :
    ```bash
    python gui_interface.py
    ```
-2. Entrez la clé initiale (ex: "ABC") pour définir la position de départ des rotors.
-3. Choisissez les rotors et le réflecteur dans les menus déroulants.
-4. Sélectionnez le mode Chiffrer ou Déchiffrer.
-5. Traitement d’un message : Entrez un message dans le champ "Message à traiter" et cliquez sur Traiter.
-6. Traitement d’un fichier : Cliquez sur Traiter un Fichier, sélectionnez un fichier texte, et le fichier sera traité et sauvegardé avec un suffixe _encrypted.txt ou _decrypted.txt.
-7. Sauvegarde de configuration : Cliquez sur Sauvegarder Configuration pour sauvegarder la configuration actuelle dans config/custom_config.json.
+2. Enter the initial key (ex: "ABC") to set the starting position of the rotors.
+3. Choose rotors and reflector from the drop-down menus.
+4. Select Encrypt or Decrypt mode.
+5. Processing a message: Enter a message in the "Message to process" field and click Process.
+6. Processing a file: Click Process File, select a text file, and the file will be processed and saved with an _encrypted.txt or _decrypted.txt suffix.
+7. Configuration Backup: Click Save Configuration to save the current configuration to config/custom_config.json.
 
 ## Tests unitaires
-Lancez les tests unitaires pour vérifier que tout fonctionne correctement :
+Run the unit tests to verify that everything is working correctly:
    ```bash
    python -m unittest discover -s tests
    ```
 
 
-## Structure du projet
+## project stuctre
    ```bash
    Projet_Enigma/
-   ├── enigma.py               # Fichier principal de la machine Enigma
-   ├── rotor.py                # Gestion des rotors
-   ├── reflector.py            # Gestion du réflecteur
-   ├── cli_interface.py        # Interface en ligne de commande
-   ├── gui_interface.py        # Interface graphique
+   ├── enigma.py               
+   ├── rotor.py               
+   ├── reflector.py           
+   ├── cli_interface.py        
+   ├── gui_interface.py        
    ├── config/
    │   └── config_manager.py
    │   └── custom_config.json 
-   │   └── default_config.json # Fichier de configuration par défaut pour les rotors et le réflecteur
+   │   └── default_config.json 
    │   └── user_config.json
    ├── tests/
-   │   ├── test_enigma.py      # Tests unitaires pour la machine Enigma
-   │    └── test_rotor.py       # Tests unitaires pour le rotor
+   │   ├── test_enigma.py     
+   │    └── test_rotor.py       
    └── README.md               # Documentation
    ```
 
-
-## Auteur
-Ce projet a été développé comme une simulation de la machine Enigma avec une personnalisation avancée et des tests unitaires.
-
-
-## Exécution finale et tests
-1. Exécute les tests unitaires pour vérifier que tout fonctionne bien :
    ```bash
-   python -m unittest discover -s tests
-2. Lance l'interface en ligne de commande :
+   python3 -m unittest discover -s tests
    ```bash
-   python cli_interface.py
-3. Lance l'interface graphique :
+   python3 cli_interface.py
    ```bash
-   python gui_interface.py
+   python3 gui_interface.py
